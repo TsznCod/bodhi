@@ -1,0 +1,296 @@
+ReCircle AI – Complete Project Handover
+Project Goal
+
+Build a native Android application called ReCircle AI for a national-level sustainability competition.
+
+The objective is to help users correctly identify waste, understand its environmental impact, and learn the proper way to recycle it using AI.
+
+This is not a web app or Flutter project.
+
+Technology Stack
+
+Build the application using:
+
+Kotlin
+Jetpack Compose
+Material Design 3
+MVVM
+Clean Architecture
+Room
+Retrofit
+OkHttp
+Navigation Compose
+CameraX
+Coil
+Hilt (only if stable)
+Gson
+Kotlin Serialization
+
+Target:
+
+Android only
+Native Android
+Production-quality code
+Current Status
+Completed
+Android Studio project created
+Kotlin + Jetpack Compose project
+Hello Android successfully ran on a real Android device
+Project architecture created
+Package structure created
+Gradle dependencies added
+Navigation configured
+Room configured
+Retrofit configured
+Basic repository/domain structure created
+
+Current package structure:
+
+ui/
+data/
+domain/
+repository/
+database/
+network/
+navigation/
+di/
+models/
+utils/
+Current Build Problem
+
+Current error:
+
+hiltAggregateDepsDebug
+
+Likely caused by a compatibility issue between:
+
+Hilt
+Kotlin 2.x
+AGP
+KAPT
+
+Do not continue adding features until the project builds successfully.
+
+Priority is:
+
+BUILD SUCCESSFUL
+Build Fix Strategy
+Read the actual Gradle error.
+
+Do not guess.
+
+Check compatibility between:
+Kotlin
+AGP
+Hilt
+KAPT
+Java version
+Try Hilt 2.50 first.
+Verify JDK 17.
+If Hilt continues blocking the project, temporarily remove Hilt and continue development.
+
+Dependency Injection can be added later.
+
+A working application is more important than using every library.
+
+App Features (Phase 1)
+
+Build only these features.
+
+Home Screen
+Welcome message
+Scan Waste
+Upload Image
+Recent Scans
+Eco Score card
+Sustainability Tip
+Scanner
+
+Use CameraX.
+
+Allow:
+
+Camera
+Gallery
+
+Compress images before upload.
+
+AI Analysis
+
+After taking a picture, send it to an AI model.
+
+Return structured JSON containing:
+
+Object Name
+Material
+Waste Category
+Environmental Impact
+Decomposition Time
+Recycling Instructions
+Reuse Ideas
+Carbon Savings
+Eco Score
+
+Display all information in a modern UI.
+
+History
+
+Store locally using Room.
+
+Each item:
+
+Image
+Date
+Object
+Category
+Eco Score
+AI Chat
+
+Simple sustainability chatbot.
+
+Examples:
+
+Can batteries be recycled?
+Is this biodegradable?
+How should I dispose of glass?
+Settings
+
+Include:
+
+Dark Mode
+Clear History
+Clear Cache
+About
+Do NOT Implement Yet
+
+Leave these for Phase 2.
+
+Login
+User accounts
+Cloud sync
+SDG educational library
+Daily challenges
+Eco Points
+Leaderboards
+QR scanning
+Barcode scanning
+Community recycling map
+
+Only leave placeholders if needed.
+
+AI
+
+Use a vision-capable AI model.
+
+Workflow:
+
+Camera
+
+↓
+
+Compress Image
+
+↓
+
+Upload Image
+
+↓
+
+AI Model
+
+↓
+
+Receive JSON
+
+↓
+
+Display Result
+
+The AI should identify the object and generate sustainability information in a single request.
+
+Development Strategy
+
+Do not generate the whole application at once.
+
+Develop incrementally.
+
+Order:
+
+Fix Build
+
+↓
+
+Home Screen
+
+↓
+
+Navigation
+
+↓
+
+Camera
+
+↓
+
+Gallery
+
+↓
+
+AI Integration
+
+↓
+
+Result Screen
+
+↓
+
+Room Database
+
+↓
+
+History
+
+↓
+
+Settings
+
+↓
+
+AI Chat
+
+↓
+
+Animations
+
+↓
+
+Testing
+
+↓
+
+APK
+
+Every step must compile successfully before moving to the next.
+
+Coding Rules
+Keep code modular.
+Reuse composables.
+Keep UI and business logic separate.
+Follow MVVM.
+Keep repositories clean.
+Build after every feature.
+Fix compile errors immediately.
+Don't rewrite working code unnecessarily.
+Competition Goal
+
+The judges should feel that this is a polished, real Android application rather than a prototype.
+
+The priority is:
+
+Stability
+Smooth UI
+Useful AI responses
+Fast performance
+Professional design
+
+Architecture is important, but a working, reliable app takes precedence over using every possible library.
